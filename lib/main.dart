@@ -1,4 +1,8 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_30daychalange/pages/homePage.dart';
+import 'package:flutter_30daychalange/pages/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: Material(
-          child: Text("Hello"),
-        ));
+      home: HomePage(),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginScreen(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginScreen()
+      },
+    );
   }
 }
