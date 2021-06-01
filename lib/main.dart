@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_30daychalange/pages/homePage.dart';
 import 'package:flutter_30daychalange/pages/login.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_30daychalange/widget/theme.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 
 void main() {
@@ -13,11 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          primarySwatch: Colors.purple,
-          fontFamily: GoogleFonts.lato().fontFamily
-      ),
-      initialRoute: "/",
+      theme: Mytheme.lightTheme(context),
+      initialRoute: "/home",
       routes: {
         '/': (context) => LoginScreen(),
         '/home': (context) => HomePage(),

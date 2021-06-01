@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_30daychalange/widget/drawer.dart';
+
+//we learn about context and constraint and Build trees- Element trees- Render trees
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -13,7 +16,7 @@ class HomePage extends StatelessWidget {
           child: Container(
         child: Text("Home Screen"),
       )),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
