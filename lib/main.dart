@@ -3,6 +3,7 @@ import 'package:flutter_30daychalange/pages/homePage.dart';
 import 'package:flutter_30daychalange/pages/login.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           primarySwatch: Colors.purple,
-          fontFamily: GoogleFonts.lato().fontFamily),
+          fontFamily: GoogleFonts.lato().fontFamily
+      ),
       initialRoute: "/",
       routes: {
         '/': (context) => LoginScreen(),
